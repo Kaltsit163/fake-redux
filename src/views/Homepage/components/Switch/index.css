@@ -1,0 +1,30 @@
+.App-Switch {
+  display: flex;
+  justify-content: space-around;
+}
+
+.i-btn {
+  display: inline-block;
+  height: 30px;
+  width: 60px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  transition: all .3s cubic-bezier(.55, 0, .1, 1);
+}
+
+.i-btn:hover {
+  box-shadow: 0 17px 50px 0 rgba(0, 0, 0, .19);
+  transform: translate3d(0, -2px, 0);
+  transition: all .3s cubic-bezier(.55, 0, .1, 1);
+  cursor: pointer
+}
+
+.blue {
+  background: rgba(48, 108, 182, 1);
+}
+
+.red {
+  background: rgba(232, 62, 74 ,1);
+}
+
