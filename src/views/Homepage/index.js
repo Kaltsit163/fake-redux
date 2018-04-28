@@ -1,29 +1,30 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Provider } from './connect';
 
 import './index.css';
 
 import Header from './components/Head/index';
 import Content from './components/Content/index'
 
-function createStore (reducer) {
-  let state = null;
-  const listeners = [];
-  const subscribe = (listener) => {
-    listeners.push(listener);
-  };
-  const getState = () => state;
-  const dispatch = (action) => {
-    state = reducer(state, action);
-    listeners.forEach((listener)=> {
-      listener && listener()
-    });
-  }
-  dispatch({});
-  return { getState, dispatch, subscribe};
-}
+// function createStore (reducer) {
+//   let state = null;
+//   const listeners = [];
+//   const subscribe = (listener) => {
+//     listeners.push(listener);
+//   };
+//   const getState = () => state;
+//   const dispatch = (action) => {
+//     state = reducer(state, action);
+//     listeners.forEach((listener)=> {
+//       listener && listener()
+//     });
+//   }
+//   dispatch({});
+//   return { getState, dispatch, subscribe};
+// }
 
 const themeReducer = (state, action) => {
   if (!state) {
@@ -49,7 +50,7 @@ class App extends Component {
     store: PropTypes.object
   }
   getChildContext () {
-    return { store } 
+    return { store }
   }
   render() {
     return (

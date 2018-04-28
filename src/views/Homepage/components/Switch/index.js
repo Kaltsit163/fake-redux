@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { connect } from '../../connect';
+import { connect } from 'react-redux';
 
 import './index.css';
 

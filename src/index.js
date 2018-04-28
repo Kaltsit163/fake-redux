@@ -5,7 +5,6 @@ import Index from './views/Homepage/index';
 
 import './style/reset.css';
 
-
 import Service from './Service';
 
 ReactDOM.render(
